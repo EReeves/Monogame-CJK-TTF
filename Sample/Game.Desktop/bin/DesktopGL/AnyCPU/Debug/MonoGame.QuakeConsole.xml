@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MonoGame.QuakeConsole</name>
+    </assembly>
+    <members>
+        <member name="T:QuakeConsole.ConsoleClearFlags">
+            <summary>
+            Defines which subparts of the <see cref="T:QuakeConsole.Console"/> to clear.
+            </summary>
+        </member>
+        <member name="F:QuakeConsole.ConsoleClearFlags.None">
+            <summary>
+            Does not clear anything.
+            </summary>
+        </member>
+        <member name="F:QuakeConsole.ConsoleClearFlags.OutputBuffer">
+            <summary>
+            Clears the text in the output part of the console.
+            </summary>
+        </member>
+        <member name="F:QuakeConsole.ConsoleClearFlags.InputBuffer">
+            <summary>
+            Clears the text in the input part of the console and resets Caret position.
+            </summary>
+        </member>
+        <member name="F:QuakeConsole.ConsoleClearFlags.InputHistory">
+            <summary>
+            Removes any history of user input.
+            </summary>
+        </member>
+        <member name="F:QuakeConsole.ConsoleClearFlags.All">
+            <summary>
+            Clears everything.
+            </summary>
+        </member>
+        <member name="T:QuakeConsole.ConsoleComponent">
+            <summary>
+            Command-line interface with swappable command interpreters.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.#ctor(Microsoft.Xna.Framework.Game)">
+            <inheritdoc />
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.IsAcceptingInput">
+            <summary>
+            Gets if the console is currently reading keyboard input.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.IsVisible">
+            <summary>
+            Gets if any part of the <see cref="T:QuakeConsole.Console"/> is visible.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.Interpreter">
+            <summary>
+            Gets or sets the command interpreter. This defines how user input commands
+            are evaluated and operated on. Optionally provides autocompletion.
+            Pass NULL to use a stub interpreter instead (useful for testing just the shell).
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.LogInput">
+            <summary>
+            Gets or sets the input command logging delegate. Set this property to log the user input
+            commands to the given delegate. For example WriteLine(String).
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.CharacterMappings">
+            <summary>
+            Gets or sets the dictionary that is used to map keyboard keys to corresponding symbols
+            shown in the <see cref="T:QuakeConsole.Console"/>.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.ActionMappings">
+            <summary>
+            Gets the dictionary that is used to map keyboard keys to corresponding console
+            actions (such as ExecuteCommand or ToggleUppercase).
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.Font">
+            <summary>
+            Gets or sets the font used to render console text.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.Padding">
+            <summary>
+            Gets or sets the padding to apply to the borders of the <see cref="T:QuakeConsole.Console"/> window.
+            Note that padding will be automatically decreased if the available window area becomes too low.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.BackgroundColor">
+            <summary>
+            Gets or sets the background color. Supports transparency.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.FontColor">
+            <summary>
+            Gets or sets the font color. Supports transparency.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.TimeToToggleOpenClose">
+            <summary>
+            Gets or sets the time in seconds it takes to fully open or close the <see cref="T:QuakeConsole.Console"/>.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.TimeToTriggerRepeatingInput">
+            <summary>
+            Gets or sets the time in seconds it takes to trigger repeating input feature.
+            Repeating input is triggered when a key is held down. When repeating input is triggered, 
+            keys which are held down will be repeatedly processed or appended to the console 
+            (normally they are processed or appended only upon key press).
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.TimeToCooldownRepeatingInput">
+            <summary>
+            Gets or sets the time in seconds it takes before another character is appended when
+            repeating input is enabled. See TimeToTriggerRepeatingInput for more information.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.NumSymbolsToMoveWhenCaretOutOfView">
+            <summary>
+            Gets or sets the number of symbols that will be brought into console input view once the user moves
+            the caret out of the visible area.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.HeightRatio">
+            <summary>
+            Gets or sets the percentage of height the <see cref="T:QuakeConsole.Console"/> window takes in relation to
+            application window height. Value in between [0...1].
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.InputPrefix">
+            <summary>
+            Gets or sets the textual symbol(s) that is shown in the beginning of console input line.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.InputPrefixColor">
+            <summary>
+            Gets or sets the color for the input prefix symbol. See InputPrefix for more information.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.CaretSymbol">
+            <summary>
+            Gets or sets the symbol which is used as the caret. This symbol is used to indicate
+            where the user input will be appended.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.CaretBlinkingInterval">
+            <summary>
+            Gets or sets the time in seconds to toggle caret's visibility.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.RemoveOverflownEntries">
+            <summary>
+            Gets or sets if rows which run out of the visible area of the console output window should be removed.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.BottomBorderColor">
+            <summary>
+            Gets or sets the color of the border at the bottom of the console window.
+            Supports transparency.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.BottomBorderThickness">
+            <summary>
+            Gets or sets the thickness of the border at the bottom of the console window in pixels.
+            To disable border, set this value less than or equal to zero.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.BackgroundTexture">
+            <summary>
+            Gets or sets the texture used to render as the console background. Set this to NULL
+            to disable textured background.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.BackgroundTextureTransform">
+            <summary>
+            Gets or sets the transformation applied to texture coordinates if background texture is set.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.TabSymbol">
+            <summary>
+            Gets or sets the symbol used to represent a tab.
+            </summary>
+            <remarks>
+            By default, four spaces are used to simulate a tab since a lot of
+            <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteFont"/>s don't support the \t char.
+            </remarks>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.SelectionColor">
+            <summary>
+            Gets or sets the color used to draw the background of the selected portion of user input.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.ToggleOpenClose">
+            <summary>
+            Opens the console windows if it is closed. Closes it if it is opened.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.Clear(QuakeConsole.ConsoleClearFlags)">
+            <summary>
+            Clears the subparts of the <see cref="T:QuakeConsole.Console"/>.
+            </summary>
+            <param name="clearFlags">Specifies which subparts to clear.</param>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.Reset">
+            <summary>
+            Clears the <see cref="T:QuakeConsole.Console"/> and sets all the settings
+            to their default values.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.Input">
+            <summary>
+            Gets the input writer of the console.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.ConsoleComponent.Output">
+            <summary>
+            Gets the output writer of the console.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.Update(Microsoft.Xna.Framework.GameTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.Draw(Microsoft.Xna.Framework.GameTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.UnloadContent">
+            <inheritdoc/>
+        </member>
+        <member name="M:QuakeConsole.ConsoleComponent.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:QuakeConsole.ICommandInterpreter">
+            <summary>
+            A contract for a <see cref="T:QuakeConsole.Console"/> command interpreter. Manages command execution and autocompletion features.
+            </summary>
+            <remarks>Used, for example, to autocomplete user input.</remarks>
+        </member>
+        <member name="M:QuakeConsole.ICommandInterpreter.Execute(QuakeConsole.IConsoleOutput,System.String)">
+            <summary>
+            Executes a <see cref="T:QuakeConsole.Console"/> command.
+            </summary>
+            <param name="output">Buffer to append data which is shown to the user.</param>
+            <param name="command">Command to execute.</param>
+        </member>
+        <member name="M:QuakeConsole.ICommandInterpreter.Autocomplete(QuakeConsole.IConsoleInput,System.Boolean)">
+            <summary>
+            Tries to autocomplete the current user input in the <see cref="T:QuakeConsole.ConsoleInput"/>.
+            </summary>
+            <param name="input">Buffer to read from and autocomplete user input.</param>
+            <param name="forward">Indicator which indicates whether we should move forward or backward with the autocomplete entries.</param>
+        </member>
+        <member name="T:QuakeConsole.StubCommandInterpreter">
+            <summary>
+            Provides a stub command interpreter which does nothing.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.StubCommandInterpreter.Execute(QuakeConsole.IConsoleOutput,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+            <param name="output">Console output buffer to append any output messages.</param>
+            <param name="command">Command to execute.</param>
+        </member>
+        <member name="M:QuakeConsole.StubCommandInterpreter.Autocomplete(QuakeConsole.IConsoleInput,System.Boolean)">
+            <summary>
+            Does nothing.
+            </summary>
+            <param name="input">Console input.</param>
+            <param name="forward">True if user wants to autocomplete to the next value; false if to the previous value.</param>
+        </member>
+        <member name="T:QuakeConsole.ConsoleAction">
+            <summary>
+            An action or modifier (other than symbol input) available in the console.
+            </summary>
+        </member>
+        <member name="T:QuakeConsole.ConsoleActionMap">
+            <summary>
+            A map specifying which input keys are translated to which <see cref="T:QuakeConsole.ConsoleAction"/>s.
+            </summary>
+            <remarks>
+            <see cref="T:System.Collections.IEnumerable" /> is implemented only to allow collection initializer syntax. 
+            Iteration will fail!
+            </remarks>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Add(Microsoft.Xna.Framework.Input.Keys,QuakeConsole.ConsoleAction)">
+            <summary>
+            Adds a mapping from keyboard key to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Add(Microsoft.Xna.Framework.Input.Keys,Microsoft.Xna.Framework.Input.Keys,QuakeConsole.ConsoleAction)">
+            <summary>
+            Adds a mapping from keyboard keys to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Add(Microsoft.Xna.Framework.Input.Keys,Microsoft.Xna.Framework.Input.Keys,Microsoft.Xna.Framework.Input.Keys,QuakeConsole.ConsoleAction)">
+            <summary>
+            Adds a mapping from keyboard keys to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Remove(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Removes a mapping from keyboard key to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Remove(Microsoft.Xna.Framework.Input.Keys,Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Removes a mapping from keyboard keys to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Remove(Microsoft.Xna.Framework.Input.Keys,Microsoft.Xna.Framework.Input.Keys,Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Removes a mapping from keyboard keys to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleActionMap.Remove(QuakeConsole.ConsoleAction)">
+            <summary>
+            Removes all mappings to <see cref="T:QuakeConsole.ConsoleAction"/>
+            </summary>
+        </member>
+        <member name="T:QuakeConsole.IConsoleInput">
+            <summary>
+            A contract for the input part of the <see cref="T:QuakeConsole.Console"/>. Defines properties and methods
+            required to manipulate the input.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.IConsoleInput.LastAutocompleteEntry">
+            <summary>
+            Gets or sets the last autocomplete entry which was added to the buffer. Note that
+            this value will be set to null whenever anything from the normal <see cref="T:QuakeConsole.Console"/>
+            input pipeline gets appended here.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.IConsoleInput.CaretIndex">
+            <summary>
+            Gets or sets the location of the caret. This is where user input will be appended.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.IConsoleInput.Length">
+            <summary>
+            Gets the number of characters currently in the buffer.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.IConsoleInput.Value">
+            <summary>
+            Gets or sets the value typed into the buffer.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.IConsoleInput.Append(System.String)">
+            <summary>
+            Writes to the <see cref="T:QuakeConsole.ConsoleInput"/>.
+            </summary>
+            <param name="value">Message to append.</param>
+        </member>
+        <member name="M:QuakeConsole.IConsoleInput.Remove(System.Int32,System.Int32)">
+            <summary>
+            Removes symbols from the <see cref="T:QuakeConsole.ConsoleInput"/>.
+            </summary>
+            <param name="startIndex">Index from which to start removing.</param>
+            <param name="length">Number of symbols to remove.</param>
+        </member>
+        <member name="M:QuakeConsole.IConsoleInput.Substring(System.Int32,System.Int32)">
+            <summary>
+            Gets a substring of the buffer.
+            </summary>
+            <param name="startIndex">Index ta take substring from.</param>
+            <param name="length">Number of symbols to include in the substring.</param>
+            <returns>Substring of the buffer.</returns>
+        </member>
+        <member name="M:QuakeConsole.IConsoleInput.Substring(System.Int32)">
+            <summary>
+            Gets a substring of the buffer.
+            </summary>
+            <param name="startIndex">Index ta take all the following symbols from.</param>
+            <returns>Substring of the buffer.</returns>
+        </member>
+        <member name="M:QuakeConsole.IConsoleInput.Clear">
+            <summary>
+            Clears the input from the buffer.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.IConsoleInput.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:QuakeConsole.IConsoleInput.Item(System.Int32)">
+            <summary>
+            Gets the symbol at the specified index.
+            </summary>
+            <param name="i">Index to take symbol from.</param>
+            <returns>Indexed symbol.</returns>
+        </member>
+        <member name="T:QuakeConsole.Symbol">
+            <summary>
+            Represents a pair of lowercase and uppercase symbols.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.Symbol.Lowercase">
+            <summary>
+            Gets the lowercase symbol.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.Symbol.Uppercase">
+            <summary>
+            Gets the uppercase symbol.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.Symbol.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:QuakeConsole.Symbol"/>.
+            </summary>
+            <param name="lowercase">Lowercase symbol of the pair.</param>
+            <param name="uppercase">Uppercase symbol of the pair.</param>
+        </member>
+        <member name="T:QuakeConsole.ConsoleOutput">
+            <summary>
+            Output part of the <see cref="P:QuakeConsole.ConsoleOutput.Console"/>. Command execution info and results will be appended here.
+            </summary>
+        </member>
+        <member name="M:QuakeConsole.ConsoleOutput.Append(System.String)">
+            <summary>
+            Appends a message to the buffer.
+            </summary>
+            <param name="message">Message to append.</param>
+        </member>
+        <member name="M:QuakeConsole.ConsoleOutput.Clear">
+            <summary>
+            Clears all the information in the buffer.
+            </summary>
+        </member>
+        <member name="T:QuakeConsole.IConsoleOutput">
+            <summary>
+            A contract for the output part of the <see cref="T:QuakeConsole.Console"/>. Defines methods manipulating
+            the output.
+            </summary>
+            <remarks>Used, for example, to clear the output window or append results from outside the console.</remarks>
+        </member>
+        <member name="M:QuakeConsole.IConsoleOutput.Append(System.String)">
+            <summary>
+            Appends a message to the buffer.
+            </summary>
+            <param name="message">Message to append.</param>
+        </member>
+        <member name="M:QuakeConsole.IConsoleOutput.Clear">
+            <summary>
+            Clears all the information in the buffer.
+            </summary>
+        </member>
+        <member name="T:QuakeConsole.Resource_DesktopGL">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.Resource_DesktopGL.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.Resource_DesktopGL.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.Resource_DesktopGL.qc_background">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:QuakeConsole.Resource_DesktopGL.qc_console">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+    </members>
+</doc>

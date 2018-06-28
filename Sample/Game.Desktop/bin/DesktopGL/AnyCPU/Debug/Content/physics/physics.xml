@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- created with http://www.physicseditor.de -->
+<bodydef version="1.0">
+	<bodies>
+
+		<body name="Items/hat">
+            <anchorpoint>0.5000,0.5000</anchorpoint>
+			<fixtures>
+
+				<fixture>
+					<density>2</density>
+					<friction>0</friction>
+					<restitution>0</restitution>
+					<filter_categoryBits>1</filter_categoryBits>
+					<filter_groupIndex>0</filter_groupIndex>
+					<filter_maskBits>65535</filter_maskBits>
+					<fixture_type>POLYGON</fixture_type>
+
+
+					<polygons>
+
+                        <polygon>  21.0000, -7.0000  ,  -1.0000, 15.0000  ,  -20.0000, -7.0000 </polygon>
+
+					</polygons>
+
+				</fixture>
+
+			</fixtures>
+		</body>
+
+		<body name="Items/computer">
+            <anchorpoint>0.5000,0.5000</anchorpoint>
+			<fixtures>
+
+				<fixture>
+					<density>0.2</density>
+					<friction>5</friction>
+					<restitution>0</restitution>
+					<filter_categoryBits>1</filter_categoryBits>
+					<filter_groupIndex>0</filter_groupIndex>
+					<filter_maskBits>65535</filter_maskBits>
+					<fixture_type>POLYGON</fixture_type>
+
+
+					<polygons>
+
+                        <polygon>  -65.0000, -22.0000  ,  2.0000, -61.0000  ,  65.0000, -21.0000  ,  40.0000, 32.0000  ,  9.0000, 60.0000  ,  -31.0000, 46.0000 </polygon>
+
+					</polygons>
+
+				</fixture>
+
+			</fixtures>
+		</body>
+
+	</bodies>
+	<metadata>
+		<format>1</format>
+		<ptm_ratio>32</ptm_ratio>
+	</metadata>
+</bodydef>
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/Sample/Game.Desktop/Content/Arial 11.spritefont</SourceFile>
+  <SourceTime>2018-06-27T16:42:21.257917+10:00</SourceTime>
+  <DestFile>/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/Sample/Game.Desktop/Content/bin/DesktopGL/Arial 11.xnb</DestFile>
+  <DestTime>2018-06-27T16:55:01.625597+10:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-06-20T17:43:55+10:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-06-20T17:43:55+10:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Color</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
