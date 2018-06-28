@@ -1,0 +1,3 @@
+[submodule "TrueTypeSharp"]
+	path = TrueTypeSharp
+	url = https://github.com/KonajuGames/TrueTypeSharp.git

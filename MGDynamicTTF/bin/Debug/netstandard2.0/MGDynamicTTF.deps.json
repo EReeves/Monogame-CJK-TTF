@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "a82096b8c773a2368294e65ab01256f8e892a4c0"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "MGDynamicTTF/1.0.0": {
+        "dependencies": {
+          "MonoGame.Framework.Portable": "3.6.0.1625",
+          "NETStandard.Library": "2.0.3",
+          "TrueTypeSharp": "1.0.0"
+        },
+        "runtime": {
+          "MGDynamicTTF.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "MonoGame.Framework.Portable/3.6.0.1625": {
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/MonoGame.Framework.dll": {
+            "assemblyVersion": "3.6.0.1625",
+            "fileVersion": "3.6.0.1625"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "TrueTypeSharp/1.0.0": {
+        "runtime": {
+          "TrueTypeSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MGDynamicTTF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "MonoGame.Framework.Portable/3.6.0.1625": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8nB63fvq6qya6loDzEzuyw1KgH4ulw33FIciOJl5kCtfXFYJx1o49vvJKC5qcPKQ0AC/kjtPnUjS+AcMoERojg==",
+      "path": "monogame.framework.portable/3.6.0.1625",
+      "hashPath": "monogame.framework.portable.3.6.0.1625.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "TrueTypeSharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

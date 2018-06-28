@@ -1,0 +1,11 @@
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/bin/Debug/netstandard2.0/MGDynamicTTF.deps.json
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/bin/Debug/netstandard2.0/MGDynamicTTF.dll
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/bin/Debug/netstandard2.0/MGDynamicTTF.pdb
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/bin/Debug/netstandard2.0/TrueTypeSharp.dll
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/bin/Debug/netstandard2.0/TrueTypeSharp.pdb
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/Debug/netstandard2.0/MGDynamicTTF.csprojResolveAssemblyReference.cache
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/Debug/netstandard2.0/MGDynamicTTF.csproj.CoreCompileInputs.cache
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/Debug/netstandard2.0/MGDynamicTTF.AssemblyInfoInputs.cache
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/Debug/netstandard2.0/MGDynamicTTF.AssemblyInfo.cs
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/Debug/netstandard2.0/MGDynamicTTF.dll
+/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/Debug/netstandard2.0/MGDynamicTTF.pdb

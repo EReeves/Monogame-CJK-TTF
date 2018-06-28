@@ -1,0 +1,51 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/MGDynamicTTF.csproj",
+    "projectName": "MGDynamicTTF",
+    "projectPath": "/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/MGDynamicTTF.csproj",
+    "outputPath": "/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/MGDynamicTTF/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/opt/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netstandard2.0"
+    ],
+    "frameworks": {
+      "netstandard2.0": {
+        "projectReferences": {
+          "/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/TrueTypeSharp/TrueTypeSharp/TrueTypeSharp.csproj": {
+            "projectPath": "/home/evan/dev/MGUI/MonogameGUI/MGDynamicTTF/TrueTypeSharp/TrueTypeSharp/TrueTypeSharp.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netstandard2.0": {
+      "dependencies": {
+        "MonoGame.Framework.Portable": {
+          "target": "Package",
+          "version": "[3.6.0.1625, )"
+        },
+        "NETStandard.Library": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.3, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
