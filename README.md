@@ -1,6 +1,9 @@
 # Monogame-CJK-TTF
 Dynamic rendering of TTF fonts, with a focus on Chinese characters.
 
+Don't use this. https://github.com/FontStashSharp/ exists now, use that.
+
+---
 
 This is more of a last resort, you're better off using a Monogame spritefont, but if you need rare characters, say for multiplayer chat or something this could fit.
 Was written fast as a quick solution, so it's rough in some areas.
